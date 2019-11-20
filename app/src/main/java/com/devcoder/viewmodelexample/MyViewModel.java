@@ -23,4 +23,10 @@ public class MyViewModel extends ViewModel {
         Random random=new Random();
         myRandomNumber="Number :"+ (random.nextInt(10-1)+1);
     }
+
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        Log.i(TAG, "ViewModel Destroyed");
+    }
 }
